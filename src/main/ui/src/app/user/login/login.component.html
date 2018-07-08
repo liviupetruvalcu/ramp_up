@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-grid-list cols="3">
+        <mat-grid-tile></mat-grid-tile> 
+
+     <mat-grid-tile class="login-element">
+         <div class="login-container">
+             <div class="login-box-header"></div>
+
+             <div class="login-box-body">
+                 <mat-grid-list cols="9" rowHeight="75px">
+                     <mat-grid-tile [rowspan]="1" class="login-icon">
+                         <mat-icon>lock</mat-icon>
+                     </mat-grid-tile>
+                     <mat-grid-tile [colspan]="7">
+                            <mat-form-field class="justifier">
+                                <input matInput placeholder="Username" text="text" [(ngModel)] = "user.username">
+                            </mat-form-field>
+                     </mat-grid-tile>
+                 </mat-grid-list>
+
+                 <mat-grid-list cols="9" rowHeight="100px">
+                        <mat-grid-tile [rowspan]="1" class="login-icon">
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </mat-grid-tile>
+                        <mat-grid-tile [colspan]="7">
+                               <mat-form-field class="justifier">
+                                   <input matInput placeholder="Password" text="password"  [(ngModel)] = "user.password">
+                               </mat-form-field>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <button matButton class="login-button" (click)="login()">
+                        <mat-icon>input</mat-icon> Login
+                    </button>
+             </div>
+         </div>
+     </mat-grid-tile>
+     <mat-grid-tile></mat-grid-tile> 
+</mat-grid-list>
+
+<router-outlet></router-outlet>

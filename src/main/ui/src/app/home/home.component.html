@@ -1,0 +1,11 @@
+<mat-toolbar>
+    <span>Home Base</span>
+    <span class="example-spacer"></span>
+    <span>Welcome {{ username }}</span>
+    <mat-chip-list>
+            <mat-chip (click)="logout()">Logout</mat-chip>
+    </mat-chip-list>
+
+</mat-toolbar>
+
+<app-home-details></app-home-details>
